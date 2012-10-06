@@ -1,3 +1,4 @@
+require "socket"
 require "cuba"
 
 class Remoto < Cuba

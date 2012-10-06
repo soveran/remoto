@@ -1,4 +1,3 @@
-require "socket"
 require "cutest"
 
 require_relative "../lib/remoto"
