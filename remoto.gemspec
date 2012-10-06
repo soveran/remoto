@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name              = "remoto"
-  s.version           = "0.0.1"
+  s.version           = "0.0.2"
   s.summary           = "Remote control for browsers"
   s.description       = "Remoto controls browsers that accept javascript via TCP, like Firefox with the RemoteControl add-on."
   s.authors           = ["Michel Martens"]
