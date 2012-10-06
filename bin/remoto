@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/remoto"
+
+require "clap"
+
+extra = Clap.run ARGV,
+  "-p" => lambda { |p| Remoto::OPTIONS[:port] = p },
+  "-b" => lambda { |b| Remoto::OPTIONS[:brow] = b }
+
+if extra.any?
+  puts "Usage: remoto [-p port] [-b browser-port]"
+  exit(1)
+end
+
+Rack::Server.start \
+  :app => Remoto,
+  :Port => Remoto::OPTIONS[:port],
+  :Host => "0.0.0.0"
